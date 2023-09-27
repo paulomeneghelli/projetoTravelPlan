@@ -4,17 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
-public class MainViagem extends CriarViagem{
+public class MainViagem extends CriarViagem {
 
 	public static void main(String[] args) {
 		List<String> atividades = new ArrayList<>();
-		
+
 		// viagemConfirmada = false;
-		
+
 		Scanner scan = new Scanner(System.in);
 		int op = -1;
-		
+
 		while (op != 0) {
 			System.out.println("BEM VINDO AO TRAVELPLAN");
 			System.out.println("1 - Criar Viagem");
@@ -52,7 +51,7 @@ public class MainViagem extends CriarViagem{
 
 				System.out.print("Informe o valor da acomodação: ");
 				viagem.setValorAcomodacao(scan.nextDouble());
-				
+
 				op = -1;
 				while (op != 0) {
 					System.out.println("MENU: Atividades:");
@@ -109,40 +108,117 @@ public class MainViagem extends CriarViagem{
 					op = Integer.valueOf(scan.nextLine());
 
 					switch (op) {
-					case (1):
+					case (1): // viagem nacional
 						System.out.println("Escolha a data da sua viagem: ");
 						System.out.println("1 - Janeiro até Abril");
 						System.out.println("2 - Maio até agosto");
+						System.out.println("3 - Setembro até Dezembro");
+						op = Integer.valueOf(scan.nextLine());
+
+						switch (op) {
+						case (1):
+							System.out.println("Datas disponiveis para: Janeiro até Abril");
+							for (String datas :  viagemPronta.datasJaneiroAbril) {
+								System.out.println(datas);
+							} // mostras datas disponiveis
+							
+							System.out.println("Digite a opção da data desejada: ");
+							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Atrações disponiveis:");
+							for (String atracoes : viagemPronta.atracoesJaneiroAbril) {
+								System.out.println(atracoes);
+							}  // mostrar atracoes disponiveis
+							
+							break;
+						case (2):
+							System.out.println("Datas disponiveis para: Maio até Agosto");
+							for (String datas : viagemPronta.datasMaioAgosto) {
+								System.out.println(datas);
+							}
+							
+							System.out.println("Digite a opção da data desejada: ");
+							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Atrações disponiveis:");
+							for (String atracoes : viagemPronta.atracoesMaioAgosto) {
+								System.out.println(atracoes);
+							}
+							
+							break;
+						case (3):
+							System.out.println("Datas disponiveis para: Setembro até Dezembro");
+							for (String datas : viagemPronta.datasSetembroDezembro) {
+								System.out.println(datas);
+							}
+							
+							System.out.println("Datas a opção da data desejada: ");
+							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Atrações disponiveis:");
+							for (String atracoes : viagemPronta.atracoesSetembroDezembro) {
+								System.out.println(atracoes);
+							}
+							break;
+						default:
+							System.out.println("Opção inválida.");
+							break;
+						}
+
+						break;
+
+					case (2): // viagem internacional
+						System.out.println("Escolha a data da sua viagem: ");
+						System.out.println("1 - Janeiro até Abril");
+						System.out.println("2 - Maio até Agosto");
 						System.out.println("3 - Setembro até Dezembro");
 						op = Integer.valueOf(scan.nextLine());
 						
 						switch(op) {
 						case(1):
 							System.out.println("Datas disponiveis para: Janeiro até Abril");
-						//for (String datas : datasJaneiroAbril) {
-						//	System.out.println(datas);
-						//}
+							for (String datas : viagemPronta.datasJaneiroAbril) {
+								System.out.println(datas);
+							}
+							
+							System.out.println("Digite a opção da data desejada: ");
+							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Atrações disponiveis:");
+							for (String atracoes : viagemPronta.atracoesJaneiroAbril) {
+								System.out.println(atracoes);
+							}
+							
 							break;
 						case(2):
 							System.out.println("Datas disponiveis para: Maio até Agosto");
+							for (String datas : viagemPronta.datasMaioAgosto) {
+								System.out.println(datas);
+							}
+							
+							System.out.println("Digite a opção da data desejada: ");
+							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Atrações disponiveis:");
+							for (String atracoes : viagemPronta.atracoesMaioAgosto) {
+								System.out.println(atracoes);
+							}
 							break;
 						case(3):
 							System.out.println("Datas disponiveis para: Setembro até Dezembro");
-							break;
-						default:
-							System.out.println("Opção inválida.");
+							for (String datas : viagemPronta.datasSetembroDezembro) {
+								System.out.println(datas);
+							}
+							
+							System.out.println("Digite a opção de data desejada: ");
+							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Atrações disponiveis:");
+							for (String atracoes : viagemPronta.atracoesSetembroDezembro) {
+								System.out.println(atracoes);
+							}
 							break;
 						}
-						
-
-						break;
-
-					case (2):
-						System.out.println("Escolha a data da sua viagem: ");
-						System.out.println("1 - Janeiro até Abril");
-						System.out.println("2 - Maio até agosto");
-						System.out.println("3 - Setembro até Dezembro");
-						op = Integer.valueOf(scan.nextLine());
 
 						break;
 
@@ -159,13 +235,12 @@ public class MainViagem extends CriarViagem{
 			}
 		}
 	}
-	
 
-	public static void adicionarAtividade(String atividade, List<String> atividades ) {
+	public static void adicionarAtividade(String atividade, List<String> atividades) {
 		atividades.add(atividade);
 		System.out.println("Atividade ADICIONADA com sucesso!");
 	}
-	
+
 	public static void alterarAtividade(int indice, String novaAtividade, List<String> atividades) {
 		if (indice >= 0 && indice < atividades.size()) {
 			atividades.set(indice, novaAtividade);
@@ -175,7 +250,7 @@ public class MainViagem extends CriarViagem{
 		}
 	}
 
-	public static void excluirAtividade(int indice,  List<String> atividades) {
+	public static void excluirAtividade(int indice, List<String> atividades) {
 		if (indice >= 0 && indice < atividades.size()) {
 			atividades.remove(indice);
 			System.out.println("Atividade EXCLUIDA com sucesso!");

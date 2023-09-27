@@ -7,49 +7,58 @@ public class ViagemPronta {
 
 	private List<String> infos;
 	private double valorTotal;
+	private Integer data;
 
 	public List<String> getInfos() {
 		return infos;
 	}
 
-	public void setData(List<String> infos) {
+	public void setInfos(List<String> infos) {
 		this.infos = infos;
 	}
 
 	public double getValorTotal() {
 		return valorTotal;
 	}
-
+	
 	public void setValorTotal(double valorTotal) {
 		this.valorTotal = valorTotal;
+	}
+	
+	public Integer getData() {
+		return data;
+	}
+	
+	public void setData(Integer data) {
+		this.data = data;
 	}
 	
 	// JANEIRO ATE ABRIL
 	List<String> destinosNacionaisJaneiroAbril = new ArrayList<>();
 	{
-		destinosNacionaisJaneiroAbril.add("Rio de Janeiro");
-		destinosNacionaisJaneiroAbril.add("Salvador");
-		destinosNacionaisJaneiroAbril.add("Florianópolis");
-		destinosNacionaisJaneiroAbril.add("Fortaleza");
-		destinosNacionaisJaneiroAbril.add("Curitiba");
+		destinosNacionaisJaneiroAbril.add("1 - Rio de Janeiro");
+		destinosNacionaisJaneiroAbril.add("2 - Salvador");
+		destinosNacionaisJaneiroAbril.add("3 - Florianópolis");
+		destinosNacionaisJaneiroAbril.add("4 - Fortaleza");
+		destinosNacionaisJaneiroAbril.add("5 - Curitiba");
 	}
 	
 	List<String> destinosInternacionaisJaneiroAbril = new ArrayList<>();
 	{
-		destinosInternacionaisJaneiroAbril.add("Cancún, México");
-		destinosInternacionaisJaneiroAbril.add("Paris, França");
-		destinosInternacionaisJaneiroAbril.add("Nova Iorque, Estados Unidos");
-		destinosInternacionaisJaneiroAbril.add("Tóquio, Japão");
-		destinosInternacionaisJaneiroAbril.add("Barcelona, Espanha");
+		destinosInternacionaisJaneiroAbril.add("1 - Cancún, México");
+		destinosInternacionaisJaneiroAbril.add("2 - Paris, França");
+		destinosInternacionaisJaneiroAbril.add("3 - Nova Iorque, Estados Unidos");
+		destinosInternacionaisJaneiroAbril.add("4 - Tóquio, Japão");
+		destinosInternacionaisJaneiroAbril.add("5 - Barcelona, Espanha");
 	}
 
-	List<String> datasJaneiroAbril = new ArrayList<>();
+	 List<String> datasJaneiroAbril = new ArrayList<>();
 	{
-		datasJaneiroAbril.add("10 de Janeiro");
-		datasJaneiroAbril.add("2 de Fevereiro");
-		datasJaneiroAbril.add("25 de Fevereiro");
-		datasJaneiroAbril.add("14 de Março");
-		datasJaneiroAbril.add("19 de Abril");
+		datasJaneiroAbril.add("1 - 10 de Janeiro");
+		datasJaneiroAbril.add("2 - 2 de Fevereiro");
+		datasJaneiroAbril.add("3 - 25 de Fevereiro");
+		datasJaneiroAbril.add("4 - 14 de Março");
+		datasJaneiroAbril.add("5 - 19 de Abril");
 	}
 
 	List<String> atracoesJaneiroAbril = new ArrayList<>();
@@ -64,29 +73,29 @@ public class ViagemPronta {
 	// MAIO ATE AGOSTO
 	List<String> datasMaioAgosto = new ArrayList<>();
 	{
-		datasMaioAgosto.add("5 de Maio");
-		datasMaioAgosto.add("11 de Junho");
-		datasMaioAgosto.add("3 de Julho");
-		datasMaioAgosto.add("20 de Julho");
-		datasMaioAgosto.add("22 de Agosto");
+		datasMaioAgosto.add("1 - 5 de Maio");
+		datasMaioAgosto.add("2 - 11 de Junho");
+		datasMaioAgosto.add("3 - 3 de Julho");
+		datasMaioAgosto.add("4 - 20 de Julho");
+		datasMaioAgosto.add("5 - 22 de Agosto");
 	}
 	
 	List<String> destinosNacionaisMaioAgosto = new ArrayList<>();
 	{
-		destinosNacionaisMaioAgosto.add("Gramado");
-		destinosNacionaisMaioAgosto.add("Recife");
-		destinosNacionaisMaioAgosto.add("Foz do Iguaçu");
-		destinosNacionaisMaioAgosto.add("Manaus");
-		destinosNacionaisMaioAgosto.add("Brasília");
+		destinosNacionaisMaioAgosto.add("1 - Gramado");
+		destinosNacionaisMaioAgosto.add("2 - Recife");
+		destinosNacionaisMaioAgosto.add("3 - Foz do Iguaçu");
+		destinosNacionaisMaioAgosto.add("4 - Manaus");
+		destinosNacionaisMaioAgosto.add("5 - Brasília");
 	}
 	
 	List<String> destinosInternacionaisMaioAgosto = new ArrayList<>();
 	{
-		destinosInternacionaisMaioAgosto.add("Bali, Indonésia");
-		destinosInternacionaisMaioAgosto.add("Roma, Itália");
-		destinosInternacionaisMaioAgosto.add("Vancouver, Canadá");
-		destinosInternacionaisMaioAgosto.add("Sydney, Austrália");
-		destinosInternacionaisMaioAgosto.add("Istambul, Turquia");
+		destinosInternacionaisMaioAgosto.add("1 - Bali, Indonésia");
+		destinosInternacionaisMaioAgosto.add("2 - Roma, Itália");
+		destinosInternacionaisMaioAgosto.add("3 - Vancouver, Canadá");
+		destinosInternacionaisMaioAgosto.add("4 - Sydney, Austrália");
+		destinosInternacionaisMaioAgosto.add("5 - Istambul, Turquia");
 	}
 	
 	List<String> atracoesMaioAgosto = new ArrayList<>();
@@ -102,28 +111,28 @@ public class ViagemPronta {
 	// SETEMBRO ATÉ DEZEMBRO
 	List<String> datasSetembroDezembro = new ArrayList<>();
 	{
-		datasSetembroDezembro.add("5 de Maio");
-		datasSetembroDezembro.add("11 de Junho");
-		datasSetembroDezembro.add("3 de Julho");
-		datasSetembroDezembro.add("20 de Julho");
-		datasSetembroDezembro.add("22 de Agosto");
+		datasSetembroDezembro.add("1 - 5 de Maio");
+		datasSetembroDezembro.add("2 - 11 de Junho");
+		datasSetembroDezembro.add("3 - 3 de Julho");
+		datasSetembroDezembro.add("4 - 20 de Julho");
+		datasSetembroDezembro.add("5 - 22 de Agosto");
 	}
 	
 	List<String> destinosNacionaisSetembroDezembro = new ArrayList<>();
 	{
-		destinosNacionaisSetembroDezembro.add("Jericoacoara");
-		destinosNacionaisSetembroDezembro.add("Bonito");
-		destinosNacionaisSetembroDezembro.add("Fernando de Noronha");
-		destinosNacionaisSetembroDezembro.add("Belo Horizonte");
-		destinosNacionaisSetembroDezembro.add("Campos do Jordão");
+		destinosNacionaisSetembroDezembro.add("1 - Jericoacoara");
+		destinosNacionaisSetembroDezembro.add("2 - Bonito");
+		destinosNacionaisSetembroDezembro.add("3 - Fernando de Noronha");
+		destinosNacionaisSetembroDezembro.add("4 - Belo Horizonte");
+		destinosNacionaisSetembroDezembro.add("5 - Campos do Jordão");
 	}
 	
 	List<String> destinosInternacionaisSetembroDezembro = new ArrayList<>();
 	{
-		destinosInternacionaisSetembroDezembro.add("Atenas, Grécia");
-		destinosInternacionaisSetembroDezembro.add("Cairo, Egito");
-		destinosInternacionaisSetembroDezembro.add("Amsterdã, Holanda");
-		destinosInternacionaisSetembroDezembro.add("Dubai, Emirados Árabes Unidos");
+		destinosInternacionaisSetembroDezembro.add("1 - Atenas, Grécia");
+		destinosInternacionaisSetembroDezembro.add("2 - Cairo, Egito");
+		destinosInternacionaisSetembroDezembro.add("3 - Amsterdã, Holanda");
+		destinosInternacionaisSetembroDezembro.add("4 - Dubai, Emirados Árabes Unidos");
 		destinosInternacionaisSetembroDezembro.add("Toronto, Canadá");
 	}
 	
