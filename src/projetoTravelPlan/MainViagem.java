@@ -121,11 +121,17 @@ public class MainViagem extends CriarViagem {
 							for (String datas :  viagemPronta.datasJaneiroAbril) {
 								System.out.println(datas);
 							} // mostras datas disponiveis
-							
 							System.out.println("Digite a opção da data desejada: ");
 							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
 							
-							System.out.println("Atrações disponiveis:");
+							System.out.println("Destinos disponiveis para: Janeiro até Abril");
+							for (String destinos : viagemPronta.destinosNacionaisJaneiroAbril) {
+								System.out.println(destinos);
+							} // mostrar destinos
+							System.out.println("Digite a opção de destino desejada: ");
+							viagemPronta.setDestino(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Atrações Selecionadas para destino:");
 							for (String atracoes : viagemPronta.atracoesJaneiroAbril) {
 								System.out.println(atracoes);
 							}  // mostrar atracoes disponiveis
@@ -136,9 +142,10 @@ public class MainViagem extends CriarViagem {
 							for (String datas : viagemPronta.datasMaioAgosto) {
 								System.out.println(datas);
 							}
-							
 							System.out.println("Digite a opção da data desejada: ");
 							viagemPronta.setData(Integer.valueOf(scan.nextLine()));
+							
+							System.out.println("Destinos disponiveis");
 							
 							System.out.println("Atrações disponiveis:");
 							for (String atracoes : viagemPronta.atracoesMaioAgosto) {
@@ -258,4 +265,5 @@ public class MainViagem extends CriarViagem {
 			System.out.println("opção invalida");
 		}
 	}
+
 }

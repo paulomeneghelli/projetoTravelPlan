@@ -8,6 +8,7 @@ public class ViagemPronta {
 	private List<String> infos;
 	private double valorTotal;
 	private Integer data;
+	private Integer destino;
 
 	public List<String> getInfos() {
 		return infos;
@@ -31,6 +32,14 @@ public class ViagemPronta {
 	
 	public void setData(Integer data) {
 		this.data = data;
+	}
+	
+	public void setDestino(Integer destino) {
+		this.destino = destino;
+	}
+	
+	public Integer getDestino() {
+		return destino;
 	}
 	
 	// JANEIRO ATE ABRIL
